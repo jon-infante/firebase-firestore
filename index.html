@@ -1,5 +1,9 @@
 <html>
     <head>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-analytics.js"></script>  
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
@@ -13,7 +17,24 @@
             <ul id="cafe-list"></ul>
 
         </div>
-
+        <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCvdoQNyW5hLxO1r3nTeZvshhMtc0e655s",
+            authDomain: "firestore-tutorial-9afae.firebaseapp.com",
+            databaseURL: "https://firestore-tutorial-9afae.firebaseio.com",
+            projectId: "firestore-tutorial-9afae",
+            storageBucket: "firestore-tutorial-9afae.appspot.com",
+            messagingSenderId: "289084273581",
+            appId: "1:289084273581:web:94639d23dcd5e214efe724",
+            measurementId: "G-8QTGPFZBDP"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        const db = firebase.firestore();
+        db.settings({ timestampsInSnapshots: true });
+        </script>
         <script src="app.js"></script>
     </body>
 </html>
